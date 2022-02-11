@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio Antes e depois</title>
+    <style>
+        body{font:18pt Arial;}
+        button{font-size:12pt; padding: 20px;}
+    </style>
+</head>
+<body>
+    <h1>Antes e depois</h1>
+    <section>
+        <button onclick ="AntecessorESucessor()">Antecessor e Sucessor</button> 
+    </section>
+    <script>
+        function AntecessorESucessor(){
+            var numeroInteiro = Number(window.prompt('digite um número inteiro qualquer'))
+            
+            window.alert(`Antes de ${numeroInteiro}, temos o número ${(numeroInteiro - 1)}.\n Depois de ${numeroInteiro}, temos o número ${numeroInteiro + 1}`)
+            
+        }
+    </script>
+</body>
+</html>
