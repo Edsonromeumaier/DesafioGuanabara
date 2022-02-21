@@ -1,2 +1,4 @@
-# DesafioGuanabara
+# Desafios Guanabara
+
+Desafios em Javascript.
  
