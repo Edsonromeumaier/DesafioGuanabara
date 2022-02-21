@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio Reajuste salarial</title>
+    <style>
+        body{font:18pt Arial;}
+        h4{font:18pt sans-serif;}
+        button{font-size:18pt ;
+            padding: 12px;        
+        }
+    </style>
+</head>
+<body>
+    <h1>Calcular desconto</h1>
+    
+        <button  onclick = "reajustar()">Reajustar salário</button> 
+    <section id="resultado">    
+        <p> Clique no botão acima para iniciar.</p>
+    </section>
+    <script>
+         
+        function reajustar(){
+
+            let funcionario = window.prompt('Qual é o nome do funcionário?')
+
+            let salario = parseFloat(prompt(`Qual é o salario de ${funcionario}?`))
+
+            let reajuste = parseFloat(prompt(`O salário de ${funcionario} vai ser reajustado em qual porcentagem?`))
+
+            let porcentagem = (salario/100 * reajuste)
+                
+            let res = document.getElementById("resultado")
+
+
+            res.innerHTML = `<p><strong> ${funcionario} recebeu um aumento salarial!</strong></p>`
+                res.innerHTML += `<p> O salário atual é R$ ${salario.toFixed(2)} reais.</p>`
+            res.innerHTML += `<p>Com um aumento de ${reajuste.toFixed(2)}%, o salario vai aumentar em R$ ${(salario/100)*reajuste} reais.</p>`
+                res.innerHTML += `<p>Sendo assim, o salário passará a ser de R$ ${((salario/100)*reajuste) + salario}`
+                        
+
+            
+                /**/
+        }
+    </script>
+</body>
+</html>
